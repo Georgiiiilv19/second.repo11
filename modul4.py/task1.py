@@ -12,18 +12,18 @@ def total_salary(path):
                         num_developers += 1
                     except ValueError:
                         print(
-                            f"Помилка: Неправильний формат заробітної плати '{line.strip()}'"
+                            f"Неправильний формат заробітної плати '{line.strip()}'"
                         )
                 else:
-                    print(f"Помилка: Неправильний формат даних '{line.strip()}'")
+                    print(f"Неправильний формат даних '{line.strip()}'")
         if num_developers > 0:
             average_salary = total_salary / num_developers
             return total_salary, average_salary
         else:
-            print("Помилка: Немає даних про заробітні плати розробників у файлі.")
+            print("Немає даних про заробітні плати розробників у файлі.")
             return 0, 0
     except FileNotFoundError:
-        print("Помилка: Файл не знайдено.")
+        print("Файл не знайдено.")
         return 0, 0
 total, average = total_salary("task1/s1.txt")
 print(
